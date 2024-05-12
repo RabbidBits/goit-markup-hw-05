@@ -516,8 +516,10 @@ img {
     transform: translate(-50%, -50%);
     width: 408px;
     height: 584px;
-    padding-right: 24px;
     padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 72px;
+    padding-bottom: 24px;
 
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -525,7 +527,7 @@ img {
 }
 
 .modal-title {
-    margin-top: 72px;
+    margin-bottom: 16px;
 
     font-weight: 500;
     font-size: 16px;
@@ -533,6 +535,58 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
+}
+
+.modal-window-input-wrapper {
+    margin-bottom: 8px;
+}
+
+.modal-window-input-label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+}
+
+.modal-window-input-container {
+    position: relative;
+}
+
+.modal-window-input-area {
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+
+    border: 1px solid #2E2F42;
+    border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-input-area:focus {
+    outline: transparent;
+    border-color: #4D5AE5;
+}
+
+.modal-window-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-input-area:focus + .modal-window-icon {
+    fill: #4D5AE5;
 }
 
 .close-btn {
