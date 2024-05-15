@@ -514,32 +514,38 @@
               </svg>
             </div>
           </div>
-          <!-- <div class="modal-window-input-wrapper"> -->
-          <label class="modal-window-input-label" for="user-comment"
-            >Comment</label
-          >
-          <textarea
-            class="modal-window-comment-area"
-            id="user-comment"
-            name="user-comment"
-            placeholder="Text input"
-          ></textarea>
-          <!-- </div> -->
-          <input
-            class="modal-window-checkbox"
-            type="checkbox"
-            id="privacy-policy"
-            name="privacy-policy"
-            value="true"
-            required
-          />
-          <div class="modal-window-input-wrapper">
-            <label class="modal-window-privacy-label" for="privacy-policy">
-              I accept the terms and conditions of the
-              <a class="modal-window-privacy-link" href="">
-                Privacy Policy
-              </a></label
+          <div class="modal-window-comment-wrapper">
+            <label class="modal-window-input-label" for="user-comment"
+              >Comment</label
             >
+            <textarea
+              class="modal-window-comment-area"
+              id="user-comment"
+              name="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="modal-window-privacy-wrapper">
+            <input
+              class="modal-window-checkbox visually-hidden"
+              type="checkbox"
+              id="privacy-policy"
+              name="privacy-policy"
+              value="true"
+              required
+            />
+            <label class="modal-window-privacy-label" for="privacy-policy">
+              <span class="modal-window-custom-checkbox">
+                <svg
+                  class="modal-window-custom-checkbox-icon"
+                  width="10"
+                  height="8"
+                >
+                  <use href="./images/icons.svg#icon-checkbox"></use></svg
+              ></span>
+              I accept the terms and conditions of the
+              <a class="modal-window-privacy-link" href=""> Privacy Policy </a>
+            </label>
           </div>
           <button class="modal-window-submit-btn" type="submit">Send</button>
         </form>
