@@ -561,7 +561,7 @@ img {
     width: 100%;
     height: 100%;
 
-    background-color: rgba(46, 47, 66, 0.7);
+    background-color: rgba(46, 47, 66, 0.4);
 
     opacity: 0;
     visibility: hidden;
@@ -591,12 +591,18 @@ img {
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #FCFCFC;
+
+    /* delete later */
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn {
     position: absolute;
     top: 24px;
     right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
     padding: 0;
@@ -604,18 +610,16 @@ img {
 
     fill: #2E2F42;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #E7E9FC;
 
-    transition-property: background-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
 .close-btn:focus {
     background-color: #404BBF;
-    border-color: transparent;
+    border: none;
     fill: #FFFFFF;
 }
 
@@ -653,13 +657,12 @@ img {
     height: 40px;
     padding-left: 38px;
 
-    border: 1px solid #2e2f42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
+    outline: transparent;
 
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window-input-area:focus {
@@ -688,14 +691,17 @@ img {
     height: 120px;
     padding: 8px 16px;
 
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     background-color: transparent;
-    border: 1px solid #2E2F42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    outline: transparent;
     resize: none;
     
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window-comment-area:focus {
@@ -740,17 +746,15 @@ img {
 
     fill: transparent;
     border-radius: 2px;
-    border: 1px solid #2E2F42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     cursor: pointer;
 
-    transition-property: background-color, border-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-window-checkbox:checked + .modal-window-privacy-label .modal-window-custom-checkbox {
     background-color: #404BBF;
-    border-color: #404BBF;
+    border: none;
     fill: #F4F4FD;
 }
 
@@ -759,9 +763,11 @@ img {
 }
 
 .modal-window-submit-btn {
-    width: 169px;
+    display: block;
+    min-width: 169px;
     height: 56px;
     padding: 16px 32px;
+    margin: 0 auto;
 
     font-weight: 500;
     line-height: 150%;
@@ -769,7 +775,7 @@ img {
     text-align: center;
     color: #FFFFFF;
     border-radius: 4px;
-    border-color: transparent;
+    border: none;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #4D5AE5;
 
